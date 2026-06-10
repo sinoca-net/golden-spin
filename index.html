@@ -1,640 +1,367 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- ═══ META PIXEL ═══════════════════════════════════════════ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1324672542961158');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1324672542961158&ev=PageView&noscript=1"
+/></noscript>
+  <!-- ═══════════════════════════════════════════════════════════ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GOLDEN SPIN — Tu bono del 30% te espera</title>
+  <title>Golden Spin – Bono 50% Primera Carga</title>
+  <meta name="description" content="Activá tu bono del 50% en Golden Spin. Plataforma premium con pagos ilimitados y atención 24hs." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1324672542961158');
-  fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1324672542961158&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --gold: #F5C518;
-      --gold-dark: #D4A800;
-      --green: #1DB954;
-      --green-dark: #17a348;
-      --black: #0a0a0a;
-      --dark: #111111;
-      --dark2: #1a1a1a;
-      --text: #e8e8e8;
-      --text-muted: #888;
+      --gold:       #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-dim:   #8A6B28;
+      --black:      #080808;
+      --dark:       #0E0E0E;
+      --dark2:      #161616;
+      --dark3:      #1E1E1E;
+      --white:      #F5F0E8;
+      --white-dim:  rgba(245,240,232,0.55);
+      --radius:     14px;
+      --wa:         #25D366;
     }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'Barlow', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background: var(--black);
-      color: var(--text);
+      color: var(--white);
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-
-    /* ─── NAVBAR ─── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+    }
+    section, header, footer { position: relative; z-index: 1; }
+    .gold-line {
+      display: block; width: 60px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 18px;
+    }
+    .bono-banner {
+      background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+      padding: 10px 24px; text-align: center;
+      font-size: 0.82rem; font-weight: 700; color: var(--black);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      position: relative; z-index: 200;
+      animation: pulseBar 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseBar { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 40px;
-      background: rgba(10,10,10,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(245,197,24,0.1);
+      position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 24px;
+      background: linear-gradient(180deg, rgba(8,8,8,0.98) 0%, transparent 100%);
+      backdrop-filter: blur(6px);
     }
-
-    .logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px;
-      letter-spacing: 3px;
-      color: var(--gold);
-      text-decoration: none;
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 900; color: var(--gold-light);
+      letter-spacing: 0.04em; text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
     }
-
     .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: #000;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 16px;
-      letter-spacing: 2px;
-      padding: 10px 22px;
-      border-radius: 6px;
-      text-decoration: none;
+      background: var(--gold); color: var(--black);
+      font-weight: 700; font-size: 0.8rem;
+      padding: 9px 18px; border-radius: 50px;
+      text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
       transition: background 0.2s, transform 0.15s;
     }
-    .nav-cta:hover { background: var(--gold-dark); transform: scale(1.03); }
-
-    /* ─── HERO ─── */
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
     .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 120px 24px 80px;
-      position: relative;
+      min-height: 100svh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 150px 24px 80px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.13) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(201,168,76,0.07) 0%, transparent 60%),
+        var(--black);
       overflow: hidden;
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(245,197,24,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(245,197,24,0.04) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(245,197,24,0.4);
-      border-radius: 100px;
-      padding: 8px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 32px;
+    .bono-hero-badge {
+      display: inline-flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.18), rgba(201,168,76,0.06));
+      border: 1.5px solid rgba(201,168,76,0.5); border-radius: 16px;
+      padding: 16px 28px; margin-bottom: 32px;
       animation: fadeUp 0.6s ease both;
+      box-shadow: 0 0 40px rgba(201,168,76,0.12);
+    }
+    .bono-hero-badge .bono-percent {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
+    }
+    .bono-hero-badge .bono-text { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+    .bono-hero-badge .bono-text .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--white-dim); }
+    .bono-hero-badge .bono-text .value { font-size: 1rem; font-weight: 700; color: var(--gold-light); }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(201,168,76,0.35); border-radius: 50px; padding: 6px 16px;
+      font-size: 0.72rem; font-weight: 500; color: var(--gold);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 28px;
+      animation: fadeUp 0.7s 0.1s ease both;
     }
     .hero-badge::before {
-      content: '';
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 2s infinite;
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); animation: pulse 1.8s ease-in-out infinite;
     }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .hero-pre {
-      font-size: clamp(16px, 3vw, 22px);
-      font-weight: 600;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-
-    .hero-pct {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(140px, 28vw, 260px);
-      line-height: 0.85;
-      color: var(--gold);
-      letter-spacing: -4px;
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.7); } }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 9vw, 5.2rem); font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.01em; margin-bottom: 22px;
       animation: fadeUp 0.7s 0.15s ease both;
-      text-shadow: 0 0 80px rgba(245,197,24,0.25);
     }
-
-    .hero-main {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(36px, 8vw, 72px);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-top: 8px;
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dim) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 3.5vw, 1.2rem); font-weight: 300; color: var(--white-dim);
+      max-width: 480px; line-height: 1.65; margin-bottom: 40px;
       animation: fadeUp 0.7s 0.2s ease both;
     }
-
-    .hero-sub {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(18px, 3.5vw, 28px);
-      letter-spacing: 3px;
-      color: var(--text-muted);
-      margin: 10px 0 32px;
-      animation: fadeUp 0.7s 0.25s ease both;
+    .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 14px; animation: fadeUp 0.7s 0.3s ease both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--black); font-weight: 700; font-size: 1rem; letter-spacing: 0.03em;
+      padding: 18px 36px; border-radius: 50px; text-decoration: none; border: none; cursor: pointer;
+      box-shadow: 0 0 40px rgba(201,168,76,0.3), 0 4px 16px rgba(0,0,0,0.5);
+      transition: transform 0.2s, box-shadow 0.2s; width: 100%; max-width: 380px;
     }
-    .hero-sub span { color: var(--gold); }
-
-    .hero-explain {
-      font-size: clamp(15px, 2.5vw, 18px);
-      color: #aaa;
-      max-width: 520px;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      animation: fadeUp 0.7s 0.3s ease both;
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(201,168,76,0.45), 0 8px 24px rgba(0,0,0,0.5); }
+    .btn-primary svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .urgency-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 50px; padding: 8px 18px; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em;
     }
-    .hero-explain strong { color: var(--text); }
-
-    .btn-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--green);
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(20px, 3.5vw, 26px);
-      letter-spacing: 2px;
-      padding: 20px 44px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      animation: fadeUp 0.7s 0.35s ease both;
-      box-shadow: 0 8px 32px rgba(29,185,84,0.35);
-    }
-    .btn-wa:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(29,185,84,0.5);
-    }
-    .btn-wa svg { width: 28px; height: 28px; flex-shrink: 0; }
-
-    .hero-social-proof {
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--text-muted);
-      animation: fadeUp 0.7s 0.4s ease both;
-    }
-    .hero-social-proof::before {
-      content: '';
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── TICKER ─── */
-    .ticker {
-      background: var(--gold);
-      color: #000;
-      padding: 16px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker-inner {
-      display: inline-flex;
-      gap: 0;
-      animation: ticker 22s linear infinite;
-    }
-    .ticker-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px;
-      letter-spacing: 2px;
-      padding: 0 40px;
-    }
-    .ticker-sep { opacity: 0.4; font-size: 22px; }
-
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    /* ─── SECCIONES GENÉRICAS ─── */
-    section { padding: 80px 24px; }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .section-tag {
-      display: inline-block;
-      border: 1px solid rgba(245,197,24,0.35);
-      border-radius: 100px;
-      padding: 6px 18px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(40px, 8vw, 72px);
-      letter-spacing: 2px;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .section-title .accent { color: var(--gold); }
-
-    /* ─── STATS ─── */
-    .stats {
-      background: var(--dark2);
-      border-top: 1px solid rgba(245,197,24,0.1);
-      border-bottom: 1px solid rgba(245,197,24,0.1);
-    }
-    .stats .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1px;
-      background: rgba(245,197,24,0.08);
-    }
-    .stat-item {
-      background: var(--dark2);
-      padding: 48px 32px;
-      text-align: center;
-    }
-    .stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(52px, 8vw, 72px);
-      color: var(--gold);
-      letter-spacing: 2px;
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 8px;
-    }
-
-    /* ─── CTA CENTRAL ─── */
-    .cta-center {
-      text-align: center;
-      margin-top: 48px;
-    }
-
-    /* ─── PASOS ─── */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2px;
-      margin-top: 48px;
-      background: rgba(245,197,24,0.06);
-      border: 1px solid rgba(245,197,24,0.08);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .step {
-      background: var(--dark);
-      padding: 40px 32px;
-    }
-    .step-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 52px;
-      color: rgba(245,197,24,0.18);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-    .step-title {
-      font-weight: 800;
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-    .step-desc {
-      font-size: 15px;
-      color: #888;
-      line-height: 1.6;
-    }
-
-    /* ─── BENEFICIOS ─── */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 48px;
-    }
-    .benefit {
-      background: var(--dark2);
-      border: 1px solid rgba(245,197,24,0.08);
-      border-radius: 10px;
-      padding: 32px 28px;
-      transition: border-color 0.25s, transform 0.2s;
-    }
-    .benefit:hover {
-      border-color: rgba(245,197,24,0.25);
-      transform: translateY(-3px);
-    }
-    .benefit-icon { font-size: 32px; margin-bottom: 14px; }
-    .benefit-title { font-weight: 800; font-size: 17px; margin-bottom: 8px; }
-    .benefit-desc { font-size: 14px; color: #888; line-height: 1.6; }
-
-    /* ─── CTA FINAL ─── */
-    .cta-final {
-      background: var(--dark2);
-      border-top: 1px solid rgba(245,197,24,0.1);
-      text-align: center;
-    }
-    .cta-final .section-title { font-size: clamp(34px, 6vw, 60px); }
-
-    .cta-final-sub {
-      font-size: clamp(15px, 2.5vw, 18px);
-      color: #aaa;
-      max-width: 480px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-    }
-
-    .proof-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 16px;
-    }
-    .proof-item {
-      font-size: 13px;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .proof-item::before { content: '●'; color: var(--green); font-size: 9px; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: #080808;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      text-align: center;
-      padding: 40px 24px;
-    }
-    footer .logo { display: block; margin-bottom: 12px; font-size: 24px; }
-    footer p { font-size: 13px; color: #555; line-height: 1.7; }
-
-    /* ─── WA FLOAT ─── */
-    .wa-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 58px;
-      height: 58px;
-      background: var(--green);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(29,185,84,0.5);
-      z-index: 200;
-      transition: transform 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-    }
-    .wa-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 32px rgba(29,185,84,0.65);
-    }
-    .wa-float svg { width: 30px; height: 30px; }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 600px) {
-      nav { padding: 14px 20px; }
-      .hero { padding: 100px 20px 60px; }
-      .btn-wa { padding: 18px 28px; font-size: 20px; }
-      section { padding: 60px 20px; }
-      .steps-grid { grid-template-columns: 1fr; }
-    }
+    .hero-trust { font-size: 0.78rem; color: var(--white-dim); letter-spacing: 0.04em; }
+    .orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(80px); opacity: 0.18; }
+    .orb-1 { width: 340px; height: 340px; background: var(--gold); top: -80px; left: -100px; animation: drift 14s ease-in-out infinite alternate; }
+    .orb-2 { width: 250px; height: 250px; background: var(--gold-dim); bottom: 0; right: -60px; animation: drift 18s ease-in-out infinite alternate-reverse; }
+    @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(20px,30px) scale(1.1); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .proof-bar { background: var(--dark2); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); padding: 20px 24px; text-align: center; }
+    .proof-bar p { font-size: 0.72rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; margin-bottom: 16px; }
+    .proof-items { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 24px 36px; }
+    .proof-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--white-dim); font-weight: 500; }
+    .proof-item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+    .bono-section { padding: 70px 24px; background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02)); border-top: 1px solid rgba(201,168,76,0.15); border-bottom: 1px solid rgba(201,168,76,0.15); text-align: center; }
+    .bono-card { max-width: 580px; margin: 0 auto; background: rgba(201,168,76,0.06); border: 1.5px solid rgba(201,168,76,0.3); border-radius: 20px; padding: 48px 36px; position: relative; overflow: hidden; }
+    .bono-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .bono-card .big-percent { font-family: 'Playfair Display', serif; font-size: clamp(5rem, 18vw, 8rem); font-weight: 900; line-height: 1; background: linear-gradient(135deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+    .bono-card .bono-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 14px; color: var(--white); }
+    .bono-card .bono-desc { font-size: 0.92rem; color: var(--white-dim); line-height: 1.75; margin-bottom: 30px; }
+    .bono-card .bono-example { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); border-radius: 12px; padding: 16px 24px; font-size: 0.9rem; color: var(--gold-light); font-weight: 600; margin-bottom: 30px; }
+    .bono-card .bono-cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--black); font-weight: 700; font-size: 1rem; padding: 17px 34px; border-radius: 50px; text-decoration: none; box-shadow: 0 0 40px rgba(201,168,76,0.35); transition: transform 0.2s, box-shadow 0.2s; width: 100%; max-width: 360px; justify-content: center; }
+    .bono-card .bono-cta:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(201,168,76,0.5); }
+    .bono-card .bono-note { margin-top: 14px; font-size: 0.72rem; color: var(--white-dim); }
+    .benefits { padding: 80px 24px; background: var(--dark); }
+    .section-label { font-size: 0.72rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; margin-bottom: 10px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 6vw, 2.8rem); font-weight: 900; line-height: 1.1; margin-bottom: 14px; }
+    .section-sub { font-size: 0.95rem; color: var(--white-dim); line-height: 1.7; max-width: 420px; margin-bottom: 48px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: var(--dark3); border: 1px solid rgba(201,168,76,0.1); border-radius: var(--radius); padding: 28px 24px; transition: border-color 0.25s, transform 0.25s; position: relative; overflow: hidden; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity 0.3s; }
+    .card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
+    .card:hover::before { opacity: 1; }
+    .card-icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(201,168,76,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .card-icon svg { width: 22px; height: 22px; color: var(--gold); }
+    .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 0.87rem; color: var(--white-dim); line-height: 1.65; }
+    .how { padding: 80px 24px; background: var(--black); }
+    .steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; padding-bottom: 36px; position: relative; }
+    .step:not(:last-child)::before { content: ''; position: absolute; left: 19px; top: 46px; width: 2px; bottom: 0; background: linear-gradient(180deg, rgba(201,168,76,0.4), transparent); }
+    .step-num { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--black); font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(201,168,76,0.25); }
+    .step-body h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; margin-top: 8px; }
+    .step-body p { font-size: 0.87rem; color: var(--white-dim); line-height: 1.65; }
+    .stats { background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04)); border-top: 1px solid rgba(201,168,76,0.15); border-bottom: 1px solid rgba(201,168,76,0.15); padding: 48px 24px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 32px; text-align: center; }
+    .stat-value { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 7vw, 3rem); font-weight: 900; color: var(--gold-light); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--white-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
+    .cta-section { padding: 90px 24px; background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 70%), var(--dark); text-align: center; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 18px; }
+    .cta-section p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.7; max-width: 380px; margin: 0 auto 36px; }
+    .btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: var(--wa); color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: 0.02em; padding: 18px 36px; border-radius: 50px; text-decoration: none; box-shadow: 0 0 40px rgba(37,211,102,0.3), 0 4px 20px rgba(0,0,0,0.4); transition: transform 0.2s, box-shadow 0.2s; width: 100%; max-width: 380px; }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(37,211,102,0.45), 0 8px 24px rgba(0,0,0,0.4); }
+    .btn-wa svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .cta-note { margin-top: 18px; font-size: 0.75rem; color: var(--white-dim); }
+    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.05); padding: 28px 24px; text-align: center; }
+    footer p { font-size: 0.72rem; color: rgba(245,240,232,0.25); line-height: 1.8; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 900; color: var(--gold-dim); margin-bottom: 10px; display: block; }
+    .float-wa { position: fixed; bottom: 22px; right: 22px; z-index: 200; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.5); text-decoration: none; animation: bounceIn 0.6s 1.5s cubic-bezier(.36,2,.5,1) both; transition: transform 0.2s; }
+    .float-wa:hover { transform: scale(1.1); }
+    .float-wa svg { width: 30px; height: 30px; color: #fff; }
+    .float-wa::before { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.35); animation: ping 2s ease-in-out infinite; }
+    @keyframes bounceIn { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+    @keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<div class="bono-banner">
+  🎁 BONO DEL 50% EN TU PRIMERA CARGA · SOLO POR HOY · PLAZAS LIMITADAS 🎁
+</div>
+
 <nav>
-  <a class="logo" href="#">GOLDEN SPIN</a>
-  <a class="nav-cta" href="https://wa.me/5492236740468?text=Hola!%20Vi%20el%20bono%20del%2030%25%20en%20Ofi%20Amarillo%20y%20quiero%20reclamarlo%20%F0%9F%8E%81">
-    🔥 BONO 30%
-  </a>
+  <a class="nav-logo" href="#">Golden Spin</a>
+  <a class="nav-cta wa-btn" href="#">🎁 Activar bono 50%</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">GOLDEN SPIN · PLATAFORMA VERIFICADA</div>
-  <p class="hero-pre">TU PRIMERA CARGA TE DA</p>
-  <div class="hero-pct">30%</div>
-  <h1 class="hero-main">DE REGALO EXTRA</h1>
-  <p class="hero-sub">— <span>EN TU PRIMER DEPÓSITO</span> —</p>
-  <p class="hero-explain">
-    <strong>Cargás $10.000, jugás con $13.000.</strong><br>
-    Sin letra chica. Sin vueltas. Cobrás sin límite.
+<header class="hero" id="inicio">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="bono-hero-badge">
+    <div class="bono-percent">50%</div>
+    <div class="bono-text">
+      <span class="label">Bono de bienvenida</span>
+      <span class="value">En tu primera carga</span>
+    </div>
+  </div>
+  <div class="hero-badge">Golden Spin · Plataforma Premium</div>
+  <h1>La experiencia<br/>premium que<br/><span class="highlight">te da más</span></h1>
+  <p class="hero-sub">
+    <strong style="color:var(--gold-light);">Activá tu bono del 50% hoy.</strong><br/>
+    Mañana puede no estar disponible.<br/>
+    Solo para los que llegan ahora.
   </p>
-  <a class="btn-wa" href="https://wa.me/5492236740468?text=Hola!%20Vi%20el%20bono%20del%2030%25%20en%20Ofi%20Amarillo%20y%20quiero%20reclamarlo%20%F0%9F%8E%81">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    ¡QUIERO MI BONO DEL 30%!
-  </a>
-  <p class="hero-social-proof">Hay gente cobrando ahora mismo · Respondemos al instante</p>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner" aria-hidden="true">
-    <span class="ticker-item">⚡ OFERTA LIMITADA <span class="ticker-sep">·</span> SOLO PRIMERAS CARGAS</span>
-    <span class="ticker-item">— RECIBÍS EL 30% EXTRA AUTOMÁTICO — <span class="ticker-sep">·</span> HOY</span>
-    <span class="ticker-item">⚡ OFERTA LIMITADA <span class="ticker-sep">·</span> SOLO PRIMERAS CARGAS</span>
-    <span class="ticker-item">— RECIBÍS EL 30% EXTRA AUTOMÁTICO — <span class="ticker-sep">·</span> HOY</span>
-    <span class="ticker-item">⚡ OFERTA LIMITADA <span class="ticker-sep">·</span> SOLO PRIMERAS CARGAS</span>
-    <span class="ticker-item">— RECIBÍS EL 30% EXTRA AUTOMÁTICO — <span class="ticker-sep">·</span> HOY</span>
-  </div>
-</div>
-
-<!-- EL BONO -->
-<section>
-  <div class="container">
-    <span class="section-tag">EL BONO QUE TE CAMBIA EL JUEGO</span>
-    <h2 class="section-title">CARGÁS $10.000<br><span class="accent">JUGÁS CON $13.000</span></h2>
-    <p style="font-size:17px;color:#aaa;max-width:560px;line-height:1.7;">
-      No es un truco ni letra chica. En Golden Spin, tu primera carga suma el 30% extra. El bono va directo a tu cuenta, disponible para jugar desde el primer segundo. Sin esperas, sin verificaciones interminables.
-    </p>
-    <div class="cta-center">
-      <a class="btn-wa" href="https://wa.me/5492236740468?text=Hola!%20Vi%20el%20bono%20del%2030%25%20en%20Ofi%20Amarillo%20y%20quiero%20reclamarlo%20%F0%9F%8E%81">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        RECLAMAR MI BONO DEL 30% AHORA
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="container">
-    <div class="stat-item"><div class="stat-num">30%</div><div class="stat-label">Bono garantizado</div></div>
-    <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Letra chica</div></div>
-    <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Pagos sin límite</div></div>
-    <div class="stat-item"><div class="stat-num">24hs</div><div class="stat-label">Atención real</div></div>
-  </div>
-</div>
-
-<!-- 3 PASOS -->
-<section style="background:var(--dark);">
-  <div class="container">
-    <span class="section-tag">EN 3 PASOS SIMPLES</span>
-    <h2 class="section-title">DE 0 A JUGANDO<br><span class="accent">EN 5 MINUTOS</span></h2>
-    <p style="font-size:17px;color:#aaa;margin-bottom:0;">
-      Sin formularios kilométricos. Sin esperas. Solo vos y el juego.
-    </p>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Escribinos por WhatsApp</div>
-        <div class="step-desc">Un clic y abrís chat directo con nuestro equipo. Respondemos al instante, no bots, personas reales.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">Hacés tu primera carga</div>
-        <div class="step-desc">Elegís el monto, transferís y listo. El 30% extra se acredita automáticamente en tu cuenta.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">Jugás y cobrás sin límite</div>
-        <div class="step-desc">Ganás, pedís tu retiro y recibís el dinero. Sin demoras, sin excusas. Así es Golden Spin.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFICIOS -->
-<section>
-  <div class="container">
-    <span class="section-tag">POR QUÉ GOLDEN SPIN</span>
-    <h2 class="section-title">LA DIFERENCIA QUE<br><span class="accent">SE SIENTE</span></h2>
-    <div class="benefits-grid">
-      <div class="benefit">
-        <div class="benefit-icon">💰</div>
-        <div class="benefit-title">Cobrás sin tope</div>
-        <div class="benefit-desc">Ganaste, cobrás. No hay monto máximo ni demoras. Tu plata es tuya y la tenés cuando la pedís.</div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">⚡</div>
-        <div class="benefit-title">Activación inmediata</div>
-        <div class="benefit-desc">Desde que escribís hasta que estás jugando pasan minutos. No días, no horas. Minutos.</div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">🛡️</div>
-        <div class="benefit-title">Plataforma verificada</div>
-        <div class="benefit-desc">Golden Spin opera con plataformas estables y probadas. Sin caídas justo cuando más necesitás.</div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">🕐</div>
-        <div class="benefit-title">Soporte 24hs</div>
-        <div class="benefit-desc">Las 3AM o las 3PM, siempre hay alguien real del otro lado listo para ayudarte.</div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">📱</div>
-        <div class="benefit-title">Desde el celu</div>
-        <div class="benefit-desc">Sin descargas, sin apps. Abrís el navegador y jugás desde cualquier lugar de Argentina.</div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">🎁</div>
-        <div class="benefit-title">30% en tu primera carga</div>
-        <div class="benefit-desc">Directo a tu saldo, disponible al instante. Más plata para jugar desde el primer momento.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta-final">
-  <div class="container">
-    <span class="section-tag">ÚLTIMA OPORTUNIDAD · NO DEJES PASAR EL BONO</span>
-    <h2 class="section-title">¿SEGUÍS ESPERANDO<br>O ARRANCÁS CON<br><span class="accent">EL 30% EXTRA?</span></h2>
-    <p class="cta-final-sub">
-      Cada minuto que esperás es plata que no estás usando.<br>
-      Escribinos ahora y reclamá tu bono.
-    </p>
-    <a class="btn-wa" href="https://wa.me/5492236740468?text=Hola!%20Vi%20el%20bono%20del%2030%25%20en%20Ofi%20Amarillo%20y%20quiero%20reclamarlo%20%F0%9F%8E%81">
-      <svg viewBox="0 0 24 24" fill="currentColor" style="width:26px;height:26px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      🔥 RECLAMAR BONO DEL 30% AHORA
+  <div class="hero-cta-group">
+    <a class="btn-primary wa-btn" href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
+      🎁 Quiero mi bono del 50% ahora
     </a>
-    <div class="proof-row">
-      <span class="proof-item">Personas jugando ahora mismo</span>
-      <span class="proof-item">Respondemos al instante</span>
-      <span class="proof-item">Sin excusas</span>
-    </div>
+    <span class="urgency-pill">⏰ Oferta disponible por tiempo limitado</span>
+    <span class="hero-trust">⚡ Atención inmediata · Ya hay gente jugando ahora mismo</span>
+  </div>
+</header>
+
+<div class="proof-bar">
+  <p>🔥 Pagos procesados hoy en toda Argentina</p>
+  <div class="proof-items">
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Pagos garantizados</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Plataforma segura</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Atención 24hs</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Miles de usuarios activos</div>
+  </div>
+</div>
+
+<section class="bono-section" id="bono">
+  <div class="bono-card">
+    <div class="big-percent">50%</div>
+    <div class="bono-title">Bono de Bienvenida Exclusivo</div>
+    <p class="bono-desc">
+      Hacés tu primera carga en Golden Spin y te acreditamos el <strong style="color:var(--gold-light);">50% extra automáticamente</strong>.<br/>
+      Sin vueltas, sin letra chica, sin esperas.
+    </p>
+    <div class="bono-example">💰 Cargás $10.000 → Jugás con $15.000</div>
+    <a class="bono-cta wa-btn" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
+      🎁 Activar mi bono ahora
+    </a>
+    <p class="bono-note">⏰ Oferta por tiempo limitado · Solo primera carga</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="benefits" id="beneficios">
+  <span class="gold-line"></span>
+  <div class="section-label">Por qué elegirnos</div>
+  <h2 class="section-title">Por qué acá<br/>la gente <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">gana de verdad</span></h2>
+  <p class="section-sub">Sin límites, sin demoras, sin excusas.<br/>Cuando ganás, <strong style="color:var(--gold-light);">cobrás. Así de simple.</strong></p>
+  <div class="cards">
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><h3>Cobrás sin límite</h3><p>Ganaste, cobrás. Sin topes, sin demoras, sin excusas. Tu plata está disponible cuando vos querés.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Siempre hay alguien para vos</h3><p>Las 3AM o las 3PM, no importa. Siempre hay un humano real del otro lado listo para ayudarte.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Jugás con total tranquilidad</h3><p>Plataforma verificada, estable y rápida. Nada de caídas justo cuando más necesitás.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>En minutos ya estás jugando</h3><p>Escribís por WhatsApp, te damos acceso, cargás y listo. <strong style="color:var(--gold-light);">Más rápido imposible.</strong></p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Jugás desde donde estés</h3><p>Con el celu alcanza. Sin descargar nada. Solo abrís y jugás.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3>Miles ya están adentro</h3><p>Mientras vos leés esto, hay gente ganando en Golden Spin. <strong style="color:var(--gold-light);">Entrá ahora.</strong></p></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div><div class="stat-value">50%</div><div class="stat-label">Bono primera carga</div></div>
+    <div><div class="stat-value">24hs</div><div class="stat-label">Atención disponible</div></div>
+    <div><div class="stat-value">∞</div><div class="stat-label">Pagos sin límite</div></div>
+    <div><div class="stat-value">ARG</div><div class="stat-label">Todo el país</div></div>
+  </div>
+</section>
+
+<section class="how" id="como-funciona">
+  <span class="gold-line"></span>
+  <div class="section-label">El proceso</div>
+  <h2 class="section-title">Activá tu bono<br/>en <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">menos de 5 minutos</span></h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Escribinos y pedí tu bono</h3><p>Un clic y abrís WhatsApp directo con nuestro equipo. Respondemos <strong style="color:var(--gold-light);">al instante</strong>. Mencioná el bono del 50% y te lo activamos de inmediato.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Hacés tu primera carga</h3><p>Te explicamos cómo cargar y te acompañamos en todo el proceso. Rápido, seguro y sin complicaciones.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Recibís el 50% extra y empezás</h3><p>Tu bono se acredita automáticamente. <strong style="color:var(--gold-light);">Empezás a jugar con más saldo</strong> desde el primer momento.</p></div></div>
+  </div>
+</section>
+
+<section class="cta-section" id="cta">
+  <span class="gold-line" style="margin: 0 auto 18px;"></span>
+  <h2>¿Seguís dejando<br/>pasar tu <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">bono del 50%?</span></h2>
+  <p>Cada hora que esperás es plata que perdés.<br/><strong style="color:var(--gold-light);">Activá tu bono hoy y empezá a jugar ahora mismo.</strong></p>
+  <a class="btn-wa wa-btn" href="#">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
+    🎁 Activar mi bono del 50% ahora
+  </a>
+  <p class="cta-note">🔥 Hay gente jugando ahora mismo · Respondemos al instante</p>
+</section>
+
 <footer>
-  <span class="logo">GOLDEN SPIN</span>
-  <p>© 2025 Golden Spin · Plataforma de entretenimiento premium en Argentina.<br>Solo para mayores de 18 años. Jugá con responsabilidad.</p>
+  <span class="footer-logo">Golden Spin</span>
+  <p>© 2025 Golden Spin · Plataforma de entretenimiento premium.<br/>Solo para mayores de 18 años. Jugá con responsabilidad.</p>
 </footer>
 
-<!-- WA FLOTANTE -->
-<a class="wa-float" href="https://wa.me/5492236740468?text=Hola!%20Vi%20el%20bono%20del%2030%25%20en%20Ofi%20Amarillo%20y%20quiero%20reclamarlo%20%F0%9F%8E%81" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a class="float-wa wa-btn" href="#" title="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
 </a>
 
 <script>
-  document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      fbq('trackCustom', 'ClickWhatsApp');
+  const WA_NUMBER  = "5492236727316";
+  const WA_MESSAGE = "Hola! Vi que hay un bono del 50% en la primera carga en Golden Spin. Quiero activarlo 🎁";
+  const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
+
+  document.querySelectorAll(".wa-btn").forEach(el => {
+    el.href = waURL;
+    el.addEventListener('click', function() {
+      fbq('trackCustom', 'clickwhatsapp');
     });
+  });
+
+  fbq('track', 'ViewContent', {
+    content_name: 'Bono 50% Primera Carga - Golden Spin',
+    content_category: 'Promotion',
+    content_type: 'product',
+    value: 0,
+    currency: 'ARS'
   });
 </script>
 
